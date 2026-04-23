@@ -59,6 +59,8 @@ void	Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterato
         return ;
     //this->_v.size vas renvoyer la taille de notre vecteur
     //et en ajoutant le nombre d elements qu on veut ajouter on a la taille qu on aura au final
+
+    //la fonction distance vas juste compter le nombre de incrimentation entre les 2 iterator
 	if (this->_v.size() + std::distance(begin, end) > this->_N)
 		throw FullContainerException();
     //le premier arguments c est la fin de notre vecteur

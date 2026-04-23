@@ -76,6 +76,7 @@ int main()
 	}
 	catch (std::exception &e)
 	{
+        std::cout << "vector ";
 		std::cout << e.what() << std::endl;
 	}
 
@@ -95,6 +96,7 @@ int main()
 	}
 	catch (std::exception &e)
 	{
+        std::cout << "tableau de int ";
         std::cout << e.what() << std::endl;
 	}
 	
@@ -128,9 +130,23 @@ int main()
     }
     catch (std::exception &e)
     {
+        std::cout << "deque ";
         std::cout << e.what() << std::endl;
     }
     std::cout << std::endl;
 
+    std::cout << "test avec une string" << std::endl;
+    std::string h = "hello";
+    easyfind(h, 'l');
+    try
+    {
+        easyfind(h, 'y');
+    }
+    catch (std::exception &e)
+    {
+        std::cout << "string ";
+        std::cout << e.what() << std::endl;
+    }
+ 
     return (0);
 }

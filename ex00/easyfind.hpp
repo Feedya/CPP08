@@ -13,7 +13,7 @@ class PasTrouver : public std::exception
 	public:
 		virtual const char* what() const throw()
 		{
-			return ("Nombre pas trouver");
+			return ("Elements pas trouver dans le containeur");
 		}
 	
 };
@@ -24,7 +24,7 @@ class PasTrouver : public std::exception
 //donc on doit faire plusieurs surcharge d operateur pour cette fonction
 
 //easyfind pour les variables qui ont les fonctions begin et end
-    template <typename T>
+template <typename T>
 void easyfind(T &container, int n)
 {
     //un iterator c est se qui se trouve a l interieur d une template si une template en a 
