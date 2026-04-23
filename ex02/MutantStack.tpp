@@ -47,11 +47,24 @@ typename MutantStack<T>::iterator MutantStack<T>::begin()
 //---------------------------------------------------------------------------
 
 
+
+//---------------------------------------------------------------------------
 template <typename T>
 typename MutantStack<T>::iterator MutantStack<T>::end()
 {
+    return (std::stack<T>::c.end());
+}
+/*  ici je peux faire commme ca sans utiliser les typedef que j ai fais dans mon header
+template <typename T>
+typename MutantStack<T>::container_type::iterator MutantStack<T>::end()
+{
 	return (std::stack<T>::c.end());
 }
+*/
+//je peux faire la meem chose avec toute les autres fonctions et en sois 
+//j ai fais pour rien les typedef parceque ils n aident pas si bcp
+//---------------------------------------------------------------------------
+
 
 template <typename T>
 typename MutantStack<T>::const_iterator MutantStack<T>::begin() const
