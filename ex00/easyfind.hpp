@@ -27,7 +27,11 @@ class PasTrouver : public std::exception
 template <typename T>
 void easyfind(T &container, int n)
 {
-    //un iterator c est se qui se trouve a l interieur d une template si une template en a 
+    //1 : un iterator c est se qui se trouve a l interieur d une template si une template en a 
+    
+    //2 : c est une classe qui a son seul but c est d etre un poiteur sur l elements
+    //  en gros cette classe dans ces private a un pointeur sur l elements du containeur
+    //l iterator en lui meeme n est pas un pointeur mais il contient un pointeur
 	typename T::iterator start_index;
     typename T::iterator end_index;
 
@@ -36,6 +40,8 @@ void easyfind(T &container, int n)
 
     while (start_index != end_index)
     {
+        //ici on va pas dereferencier la classe iterator en elle meme mais le poitneur qui se trouve dedans
+        //la classe iterator a une surcharge d operator sur le dereferencement
         if (*start_index == n)
         {    
             std::cout << "on a trouver!!!!!!!!!!" << std::endl;
@@ -46,7 +52,7 @@ void easyfind(T &container, int n)
     throw (PasTrouver());
 }
 
-//pour tableau de int qui n ont pas de end et begin
+//pour tableau de int (style C) qui n ont pas de end et begin
 
 //ici c est un peu technique
 //mais en gros
@@ -55,6 +61,8 @@ void easyfind(T &container, int n)
 //et on va lui montrer que N est la taille en fesant ca "T (&tab)[N]"
 //et avec ca il va capter que c est la taille
 //c est un peu un truque qu il faut apprendre par coeur
+
+//ca s appelle "déduction automatique des paramètres template non-type"
 template <typename T, unsigned int N>
 void    easyfind(T (&tab)[N], int n)
 {

@@ -26,7 +26,7 @@ class Span
 private:
     //taille limite
 	unsigned int		_N;
-    //
+    //notre vecteur
 	std::vector<int>	_v;
 
 public:

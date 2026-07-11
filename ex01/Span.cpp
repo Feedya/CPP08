@@ -64,6 +64,8 @@ void	Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterato
 	if (this->_v.size() + std::distance(begin, end) > this->_N)
 		throw FullContainerException();
     //le premier arguments c est la fin de notre vecteur
+    //pour dire ou est ce qu on va ajouter 
+
     //le deuxieme et le troisieme c est de ou est ce qu on veut copier ces valeurs
 	this->_v.insert(this->_v.end(), begin, end);
 }

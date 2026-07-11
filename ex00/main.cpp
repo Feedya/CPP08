@@ -61,6 +61,8 @@ int main()
     //FUN FACT 2
     //le compilateur ne doit pas chercher des petits bout
     //si a un moment il a plus de ligne droite opour continuer a remplir le vecteur
+    //il va trouver une nouvelle place dans la memoire 2x ou 1.5x plus grande
+    //que celle qui l avait avant
     //-----------------------------------------------------------------------------------
 	std::cout << "\nTest vector container" << std::endl;
     std::vector<int> vector;
